@@ -44,7 +44,7 @@ body {
 
 .cover-container {
   max-width: 100em;
-  width: -webkit-fill-available;
+  width: 100em;
 }
 
 
