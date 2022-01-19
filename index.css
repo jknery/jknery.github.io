@@ -43,7 +43,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 85em;
 }
 
 
@@ -94,7 +94,7 @@ body {
  * Cover
  */
 .cover {
-  padding: 0 1.5rem;
+  text-align: justify!important;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
