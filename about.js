@@ -6,13 +6,18 @@ $(document).ready(function(){
   });
 
 function getText() {
-    return 'Graduando em Sistemas de Informação pela Unifacisa. Sempre procuro a oportunidade de crescimento em conjunto '  +
-    'com o time e crescimento pessoal também a fim de que possa chegar ao objetivo comum sendo elas a entrega e '+
-    'satisfação do cliente em ter um produto de alta qualidade. '+
-    'Ansioso em aprender, em saber das coisas e como essas coisas acontecem, bom em resolver problemas, não '+
-    'sou uma pessoa perfeita, mas sabe que existe hora para tudo, e se não sabe fazer algo tenho pulso para dizer e pedir '+
-    'ajuda, aprendo com erros e aceito críticas sendo elas bem fundamentadas. '+
-    'Em conjunto ou equipe gosta de conhecer todo mundo, inteirar-se das atividades de maneira que consiga '+
-    'visualizar impactos futuros de decisões tomadas hoje. No final dando tudo certo sabe compartilhar o momento, porém '+
-    'se algo der errado mantém o espirito de união.';
+    return "I am a Senior Software Engineer and Technical Lead with solid experience in software development, solution architecture," +
+"and enterprise system integration, working in mission-critical environments, including banking and financial institutions"+
+"and large consulting organizations. Throughout my career, I have contributed to the design and delivery of secure, scalable,"+
+"and business-aligned solutions. I have extensive experience in banking and financial environments, participating in projects"+
+"that require high standards of governance, information security, performance, traceability, and regulatory compliance."+
+"My work includes legacy system integration, platform modernization, process automation, and support for high-volume"+
+"transactional systems under strict service level agreements."+
+"I have a strong technical background in Java and the Spring ecosystem, with hands-on experience in REST and SOAP APIs,"+
+"messaging systems, relational and non-relational databases, distributed caching, and observability practices."+
+"My approach is architecture-driven, focusing on scalability, resilience, security, code quality, and long-term maintainability."+
+"In addition to my technical expertise, I have acted as a Technical Lead, supporting architectural decisions, mentoring development"+
+"teams, and collaborating closely with business and functional stakeholders.";
 }
+
+ 

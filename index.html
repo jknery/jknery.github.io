@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>JKNery</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Senior Java Fullstack Developer / Tech Lead. Java 17, Spring Boot/Cloud/Security, Microservices, Angular/TypeScript, CI/CD, Observability. Banking and enterprise systems." name="description">
+  <meta content="Java 17, Spring Boot, Spring Cloud, Spring Security, Microservices, Angular, TypeScript, Tech Lead, Senior Developer, CI/CD, Observability, Banking" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,6 +27,87 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+  /* Theme: KOERICH navy + cyan (clean + modern) */
+  :root {
+    --jk-navy: #0b2a4a;
+    --jk-navy-2: #061e35;
+    --jk-cyan: #00a8ff;
+    --jk-slate: #aab6c4;
+    --jk-white: #ffffff;
+    --jk-text: #1f2d3d;
+  }
+
+  /* Global links / accents */
+  a { color: var(--jk-cyan); }
+  a:hover { color: #3cc2ff; }
+
+  /* Sidebar */
+  #header { background: linear-gradient(180deg, var(--jk-navy) 0%, var(--jk-navy-2) 100%); }
+  #header .profile h1 a { color: var(--jk-white); }
+  #header .profile .social-links a { background: rgba(255,255,255,0.08); color: var(--jk-white); }
+  #header .profile .social-links a:hover { background: var(--jk-cyan); color: var(--jk-navy-2); }
+
+  /* Brand logo */
+  #header .brand-logo { display: block; text-align: center; margin: 0 0 14px 0; }
+  #header .brand-logo img { max-width: 160px; width: 100%; height: auto; filter: drop-shadow(0 8px 14px rgba(0,0,0,0.25)); }
+  @media (max-width: 768px) {
+    #header .brand-logo img { max-width: 140px; }
+  }
+
+  /* Menu active state */
+  .nav-menu a, .nav-menu a:focus { color: var(--jk-slate); }
+  .nav-menu a i, .nav-menu a:focus i { color: rgba(255,255,255,0.55); }
+  .nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a { color: var(--jk-white); }
+  .nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i { color: var(--jk-cyan); }
+
+  /* Hero readability */
+  #hero:before { background: rgba(6, 30, 53, 0.60); }
+  #hero h1 { color: var(--jk-white); text-shadow: 0 2px 16px rgba(0,0,0,0.35); }
+  #hero h2 { color: rgba(255,255,255,0.85); }
+  #hero p { color: rgba(255,255,255,0.92); }
+  #hero p span { color: var(--jk-cyan); }
+
+  /* Section titles */
+  .section-title h2 { color: var(--jk-navy); }
+  .section-title h2::after { background: var(--jk-cyan); }
+
+  /* Buttons / back to top */
+  .back-to-top { background: var(--jk-cyan); }
+  .back-to-top:hover { background: #3cc2ff; }
+
+  /* Cards / portfolio */
+  .portfolio-wrap { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 24px rgba(6,30,53,0.12); }
+  .portfolio-info { padding: 12px 14px; background: #fff; }
+  .portfolio-info h4 { margin: 0 0 6px 0; font-size: 16px; font-weight: 600; color: var(--jk-navy); }
+  .portfolio-info p { margin: 0; font-size: 13px; line-height: 1.35; color: rgba(31,45,61,0.85); }
+
+  .project-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .project-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(11,42,74,0.18);
+    font-size: 12px;
+    color: rgba(11,42,74,0.85);
+    background: rgba(0,168,255,0.06);
+  }
+
+  /* Portfolio links icons */
+  .portfolio .portfolio-wrap .portfolio-links a { background: rgba(6,30,53,0.55); }
+  .portfolio .portfolio-wrap .portfolio-links a:hover { background: var(--jk-cyan); color: var(--jk-navy-2); }
+
+  /* Inline project details (lightbox) */
+  .project-details { display: none; max-width: 820px; }
+  .project-details h3 { margin: 0 0 10px 0; font-size: 18px; color: var(--jk-navy); }
+  .project-details .meta { margin: 0 0 12px 0; font-size: 13px; color: rgba(31,45,61,0.85); }
+  .project-details ul { margin: 0; padding-left: 18px; }
+  .project-details li { margin-bottom: 6px; color: rgba(31,45,61,0.92); }
+
+  /* Mobile toggle */
+  .mobile-nav-toggle { color: var(--jk-cyan); }
+</style>
+
   <!-- =======================================================
   * Template Name: iPortfolio - v3.7.0
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -45,9 +126,15 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <!-- LOGO: place your logo at assets/img/koerich-logo.png (transparent PNG recommended) -->
+        <a href="#hero" class="brand-logo" aria-label="KOERICH">
+          <img src="assets/img/koerich-logo.png" class="img-fluid" alt="KOERICH logo">
+        </a>
+        <!-- NEW PHOTO: place your new photo at assets/img/profile-jose.jpg -->
+        <!-- <img src="assets/img/profile-jose.jpg" alt="José Ivo Koerich Nery" class="img-fluid rounded-circle"> -->
         <h1 class="text-light"><a href="index.html">José Ivo Koerich Nery</a></h1>
         <div class="social-links mt-3 text-center">
+          <a href="https://github.com/jknery" target="_blank" class="github"><i class="bx bxl-github"></i></a>
           <a href="https://www.instagram.com/jk_nery" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="https://www.linkedin.com/in/jose-ivo-koerich-nery/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
@@ -58,7 +145,7 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
           <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
@@ -69,8 +156,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1>José Ivo Köerich Nery</h1>
-      <p>I'm <span class="typed" data-typed-items="Developer, Software Engineer, Sound Engineer, Enthusiastic"></span></p>
+      <h1>José Ivo Koerich Nery</h1>
+      <h2>Senior Java Fullstack Developer | Tech Lead</h2>
+      <p>Focus: <span class="typed" data-typed-items="Java 17 & Spring Boot, Microservices, Angular & TypeScript, APIs REST, CI/CD & Observability"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -82,29 +170,27 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p id="ABOUT">
+          <p id="ABOUT">Senior Software Engineer and Technical Lead with experience in banking and enterprise systems, focused on scalable architectures, secure APIs, and high-quality deliveries.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/profile-jose.jpg" class="img-fluid" alt="José Ivo Koerich Nery">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Fullstack Developer.</h3>
+            <h3>Senior Java Fullstack Developer | Tech Lead</h3>
             <p class="fst-italic">
-              Collaborative Team Work | I like to learn new things | I like to propose solutions | I Like To Visualize Future Impacts On Present Modifications | Self-taught
+              Banking and enterprise systems | Microservices | Secure APIs | Architecture-driven development | Mentoring and technical leadership
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>25 Jan 1994</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+55 83 9941 11141</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Campina Grande, PB, Brazil</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+55 83 99983 5802</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Belém, PB, Brazil</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>28</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>E-mail:</strong> <span>joseivokoerichnery@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
@@ -135,21 +221,21 @@
           <div class="col-lg-6" data-aos="fade-up">
 
             <div class="progress">
-              <span class="skill">Java (EE, Spring framework, JPA, Hibernate, EJB) <i class="val">100%</i></span>
+              <span class="skill">Java (EE, Spring framework, JPA, Hibernate, EJB)</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">Javascript (Node.Js, Express.Js, Angular2+, React.Js) <i class="val">70%</i></span>
+              <span class="skill">Javascript (Node.Js, Express.Js, Angular2+, React.Js)</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">C/C++ <i class="val">80%</i></span>
+              <span class="skill">C/C++</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -160,14 +246,14 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
             <div class="progress">
-              <span class="skill">Python <i class="val">50%</i></span>
+              <span class="skill">Python</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">C# <i class="val">30%</i></span>
+              <span class="skill">C#</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -186,28 +272,28 @@
           <div class="col-lg-6" data-aos="fade-up">
 
             <div class="progress">
-              <span class="skill">HTML <i class="val">60%</i></span>
+              <span class="skill">HTML</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">CSS<i class="val">45%</i></span>
+              <span class="skill">CSS</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">SQL (PostgreSql, MySQL, OracleDB, MS SQL Server, SQLite, H2 Database) <i class="val">80%</i></span>
+              <span class="skill">SQL (PostgreSql, MySQL, OracleDB, MS SQL Server, SQLite, H2 Database)</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">CI/CD (Jenkins, Bitbucket Pipelines, Spinaker)<i class="val">50%</i></span>
+              <span class="skill">CI/CD (Jenkins, Bitbucket Pipelines, Spinaker)</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -218,21 +304,21 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
             <div class="progress">
-              <span class="skill">Source Code Management (Git with Git FLOW) <i class="val">75%</i></span>
+              <span class="skill">Source Code Management (Git with Git FLOW)</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">Dependency Management (Maven, Npn, Yarn) <i class="val">75%</i></span>
+              <span class="skill">Dependency Management (Maven, Npm, Yarn)</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div class="progress">
-              <span class="skill">API documentation (Swagger, Postman, Insomnia) <i class="val">80%</i></span>
+              <span class="skill">API documentation (Swagger, Postman, Insomnia)</span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -256,48 +342,137 @@
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
+
             <div class="resume-item">
-              <h4>Fullstack Developer</h4>
-              <h5>2021 - Present</h5>
-              <p><em>CWI Software, Porto Alegre, RS, Brazil </em></p>
+              <h4>Senior Software Engineer / Tech Lead</h4>
+              <h5>10/2023 - 01/2026</h5>
+              <p><em>Indra/Minsait</em></p>
               <ul>
-                Responsible for the development of the customer's pix operations reconciliation engine, which boils down to
-                orchestration of internal operations with its clients or external operations with Bacen.
+                <li>Designed and delivered customer-journey and contact-center solutions (Genesys Cloud/Engage), including IVR/flow governance and integrations with enterprise services.</li>
+                <li>Drove technical leadership: architecture reviews, code reviews, production troubleshooting, and delivery governance across cross-functional teams.</li>
+                <li>Strengthened reliability and observability with structured logging, monitoring readiness, and incident-oriented improvements.</li>
               </ul>
             </div>
+
             <div class="resume-item">
-              <h4>Fullstack Developer</h4>
-              <h5>2021 - 2021</h5>
-              <p><em>Stoneridge Inc., Campinas, SP, Brazil</em></p>
+              <h4>Senior Software Engineer</h4>
+              <h5>01/2023 - 10/2023</h5>
+              <p><em>Castgroup</em></p>
               <ul>
-                Responsible for the support and implementation of the MirrorEye® product, both data management and embedded systems
+                <li>Modernized mission-critical backend services through cloud migration initiatives, focusing on stability, performance, and maintainability.</li>
+                <li>Implemented microservices and REST APIs using clean/hexagonal architecture principles, quality gates (Sonar), and CI/CD pipelines.</li>
+                <li>Improved operational readiness by standardizing logs, error handling, and integration contracts.</li>
               </ul>
             </div>
+
             <div class="resume-item">
-              <h4>Fullstack Developer</h4>
-              <h5>2020 - 2021</h5>
-              <p><em>Stefanini Group, Campina Grande, PB, Brazil</em></p>
+              <h4>Senior Software Engineer</h4>
+              <h5>10/2021 - 01/2023</h5>
+              <p><em>CWI Software</em></p>
               <ul>
-                Responsible for the development of the systems of the Court of Justice of the State of Pará.
+                <li>Built and evolved financial and payments platform components, including reconciliation and high-traceability transaction flows.</li>
+                <li>Applied microservices and hexagonal architecture, asynchronous processing, and resilient integration patterns for mission-critical workloads.</li>
+                <li>Practiced test-driven delivery (JUnit/Mockito) and documentation-first APIs (OpenAPI/Swagger) to raise delivery quality.</li>
               </ul>
             </div>
+
             <div class="resume-item">
-              <h4>Backend Developer</h4>
-              <h5>2019 - 2020</h5>
-              <p><em>CTIS Tecnologia/Sonda, Campina Grande, PB, Brazil</em></p>
+              <h4>Software Engineer / Full Stack Developer</h4>
+              <h5>01/2021 - 10/2021</h5>
+              <p><em>Stoneridge Inc.</em></p>
               <ul>
-                Responsible for the development and support of the systems of the Secretary of Finance and Finance of the city of Belo Horizonte - MG
+                <li>Supported and evolved the MirrorEye platform, improving data handling workflows and integration stability.</li>
+                <li>Worked close to platform/embedded constraints, focusing on reliability, diagnostics, and production support excellence.</li>
               </ul>
             </div>
+
+            <div class="resume-item">
+              <h4>Software Engineer / Full Stack Developer</h4>
+              <h5>08/2020 - 01/2021</h5>
+              <p><em>Stefanini Group</em></p>
+              <ul>
+                <li>Delivered and maintained enterprise applications for the justice domain, prioritizing governance, availability, and safe releases.</li>
+                <li>Implemented integrations and production fixes with a quality mindset (reviews, tests, and maintainable code).</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Software Engineer / Full Stack Developer</h4>
+              <h5>12/2017 - 08/2020</h5>
+              <p><em>CTIS Tecnologia / Sonda</em></p>
+              <ul>
+                <li>Contributed to banking and public-sector systems delivery, including enterprise integrations and high-availability support routines.</li>
+                <li>Developed enterprise Java solutions with relational databases (Oracle/SQL Server) and integration endpoints (REST/SOAP).</li>
+                <li>Operated in critical environments with SLA focus, structured troubleshooting, and continuous improvement of stability.</li>
+              </ul>
+            </div>
+
+            <!-- Additional engagements and projects referenced across the conversation (safe for public portfolio) -->
+            <h3 class="resume-title">Selected Engagements & Projects</h3>
+
+            <div class="resume-item">
+              <h4>Genesys Cloud Integration & Customer Journeys (Carrefour / Shell)</h4>
+              <h5>Project</h5>
+              <p><em>Contact Center / Omnichannel</em></p>
+              <ul>
+                <li>Designed and implemented Genesys Cloud flows (IVR/routing) and omnichannel integrations to support end-to-end customer journeys.</li>
+                <li>Defined governance standards (transfer reasons, tagging, metrics) and integration patterns for sustainable evolution.</li>
+                <li>Partnered with business stakeholders to improve self-service and operational KPIs.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>PBH Fazenda Autoatendimento / Auditoria IF</h4>
+              <h5>Project</h5>
+              <p><em>Public Sector Platform</em></p>
+              <ul>
+                <li>Delivered and evolved self-service and audit-oriented modules, integrating with legacy services and enterprise data sources.</li>
+                <li>Applied security-first practices (auth flows, least privilege) and maintainable architecture for long-term support.</li>
+                <li>Improved operability through logging, error handling, and predictable release practices.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Kurier Meridio SOAP Integrations (Java + Maven)</h4>
+              <h5>Project</h5>
+              <p><em>Enterprise Integration</em></p>
+             <ul>
+              <li>Implemented Java SOAP client integrations (authentication and timesheet operations) using Maven-based builds and clean adapter boundaries.</li>
+              <li>Handled complex SOAP responses (referenced arrays via href / SOAP-ENC) with robust deserialization and defensive parsing.</li>
+              <li>Improved reliability with retries/timeouts, structured logging, and clear error surfaces for support teams.</li>
+            </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Data Export Migration (.NET to Java / Spring Boot)</h4>
+              <h5>Project</h5>
+              <p><em>Modernization</em></p>
+              <ul>
+                <li>Migrated a data export solution from .NET (C#) to Java (Spring Boot 2.7), preserving functional behavior and improving maintainability.</li>
+                <li>Standardized build/dependency management (Maven), tests, and logging for predictable operations.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Altice MEO Portugal - Parametric Tool</h4>
+              <h5>Project</h5>
+              <p><em>Platform Tooling</em></p>
+              <ul>
+                <li>Contributed to a configuration-driven (parametric) tooling initiative, enabling scalable behavior changes with minimal code churn.</li>
+                <li>Focused on maintainable delivery practices: clear contracts, documentation, and quality-oriented implementation.</li>
+              </ul>
+            </div>
+
           </div>
-          </div>
+
+          <!-- Education -->
           <div class="col-lg-6" data-aos="fade-up">
             <h3 class="resume-title">Education</h3>
-              <div class="resume-item">
-                <h4>Bachelor of Information System</h4>
-                <h5>2018 - 2022</h5>
-                <p><em>UNIFACISA, Campina Grande, PB, Brazil</em></p>
-              </div>
+            <div class="resume-item">
+              <h4>Bachelor of Information System</h4>
+              <h5>2018 - 2023</h5>
+              <p><em>UNIFACISA, Campina Grande, PB, Brazil</em></p>
+            </div>
           </div>
         </div>
 
@@ -309,113 +484,246 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Certificates</h2>
-          <p>Under Construction</p>
+          <h2>Projects</h2>
+          <p>Selected projects. Add your screenshots under <strong>assets/img/portfolio/</strong> (see HTML comments in each item) and update the repository links.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Java</li>
-              <li data-filter=".filter-card">Management</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-banking">Banking</li>
+              <li data-filter=".filter-fullstack">Fullstack</li>
+              <li data-filter=".filter-platform">Platforms</li>
+              <li data-filter=".filter-contact">Contact Center</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            <!-- IMPORTANT: Add screenshots under assets/img/portfolio/
+                Suggested naming convention:
+                - pix-reconciliation-1.png
+                - pbh-fazenda-1.png
+                - mirroreye-1.png
+                - tjpa-1.png
+                - genesys-flows-1.png
+                - kurier-meridio-soap-1.png
+                You can add more images per project (e.g., -2.png, -3.png).
+            -->
+
+            <!-- Project 1: PIX Reconciliation Engine (Banking) -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-banking filter-platform">
+              <div class="portfolio-wrap">
+                <!-- PRINT PATH: assets/img/portfolio/pix-reconciliation-1.png -->
+                <img src="assets/img/download.png" class="img-fluid" alt="PIX reconciliation engine">
+                <div class="portfolio-info">
+                  <h4>PIX Reconciliation Engine</h4>
+                  <p>Banking integration and reconciliation flows with high traceability and reliability.</p>
+                  <div class="project-tags">
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">Spring Boot</span>
+                    <span class="project-tag">Microservices</span>
+                    <span class="project-tag">Observability</span>
+                  </div>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/pix-reconciliation-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="PIX Reconciliation Engine | Java, Spring Boot, Microservices | Banking"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/jknery" target="_blank" title="Repository (update link)"><i class="bx bx-link"></i></a>
+                  <a href="#proj-pix" class="portfolio-details-lightbox" data-glightbox="type: inline" title="Details"><i class="bx bx-info-circle"></i></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            <!-- Project 2: PBH Fazenda Autoatendimento / Auditoria IF (Fullstack) -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-fullstack filter-platform">
+              <div class="portfolio-wrap">
+                <!-- PRINT PATH: assets/img/portfolio/pbh-fazenda-1.png -->
+                <img src="assets/img/images.png" class="img-fluid" alt="PBH Fazenda autoatendimento">
+                <div class="portfolio-info">
+                  <h4>PBH Fazenda - Self-service Platform</h4>
+                  <p>Public sector platform modules with focus on security, compliance and maintainable integrations.</p>
+                  <div class="project-tags">
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">Spring</span>
+                    <span class="project-tag">Angular</span>
+                    <span class="project-tag">REST APIs</span>
+                  </div>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/pbh-fazenda-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="PBH Fazenda Autoatendimento | Java/Spring + Angular | Public Sector"><i class="bx bx-plus"></i></a>
+                  <a href="https://prefeitura.pbh.gov.br/fazenda/autoatendimento" target="_blank" title="Repository (update link)"><i class="bx bx-link"></i></a>
+                  <a href="#proj-pbh" class="portfolio-details-lightbox" data-glightbox="type: inline" title="Details"><i class="bx bx-info-circle"></i></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            <!-- Project 3: MirrorEye (Stoneridge) (Platforms) -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-platform">
+              <div class="portfolio-wrap">
+                <!-- PRINT PATH: assets/img/portfolio/mirroreye-1.png -->
+                <img src="assets/img/1684856015341.jpeg" class="img-fluid" alt="MirrorEye support and implementation">
+                <div class="portfolio-info">
+                  <h4>MirrorEye (Stoneridge)</h4>
+                  <p>Platform support and data management for an embedded/automotive solution.</p>
+                  <div class="project-tags">
+                    <span class="project-tag">Platforms</span>
+                    <span class="project-tag">Data</span>
+                    <span class="project-tag">Integration</span>
+                    <span class="project-tag">Support</span>
+                  </div>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/mirroreye-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="MirrorEye | Data Management + Embedded/Platform Support"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/jknery" target="_blank" title="Repository (update link)"><i class="bx bx-link"></i></a>
+                  <a href="#proj-mirroreye" class="portfolio-details-lightbox" data-glightbox="type: inline" title="Details"><i class="bx bx-info-circle"></i></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            <!-- Project 4: TJPA Systems (Justice) (Platforms) -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-platform">
+              <div class="portfolio-wrap">
+                <!-- PRINT PATH: assets/img/portfolio/tjpa-1.png -->
+                <img src="assets/img/imagess.jpeg" class="img-fluid" alt="TJPA systems">
+                <div class="portfolio-info">
+                  <h4>TJPA Enterprise Systems</h4>
+                  <p>Development and maintenance of enterprise systems in justice/public sector context.</p>
+                  <div class="project-tags">
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">Enterprise</span>
+                    <span class="project-tag">Integration</span>
+                    <span class="project-tag">Governance</span>
+                  </div>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/tjpa-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="TJPA Systems | Enterprise Systems Development and Support"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/jknery" target="_blank" title="Repository (update link)"><i class="bx bx-link"></i></a>
+                  <a href="#proj-tjpa" class="portfolio-details-lightbox" data-glightbox="type: inline" title="Details"><i class="bx bx-info-circle"></i></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            <!-- Project 5: Genesys Cloud Flows (Carrefour / Shell) (Contact Center) -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-contact filter-platform">
+              <div class="portfolio-wrap">
+                <!-- PRINT PATH: assets/img/portfolio/genesys-flows-1.png -->
+                <img src="assets/img/genesys-cloud-custom-data-actions.webp" class="img-fluid" alt="Genesys Cloud flows">
+                <div class="portfolio-info">
+                  <h4>Genesys Cloud Flows</h4>
+                  <p>IVR/flow design and omnichannel integrations for customer journeys.</p>
+                  <div class="project-tags">
+                    <span class="project-tag">Genesys Cloud</span>
+                    <span class="project-tag">IVR</span>
+                    <span class="project-tag">Omnichannel</span>
+                    <span class="project-tag">Integrations</span>
+                  </div>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/genesys-flows-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Genesys Cloud | IVR/Flows, Omnichannel Integrations | Carrefour / Shell"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/jknery" target="_blank" title="Repository (update link)"><i class="bx bx-link"></i></a>
+                  <a href="#proj-genesys" class="portfolio-details-lightbox" data-glightbox="type: inline" title="Details"><i class="bx bx-info-circle"></i></a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            <!-- Project 6: Kurier Meridio SOAP Integration (Platforms) -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-platform">
+              <div class="portfolio-wrap">
+                <!-- PRINT PATH: assets/img/portfolio/kurier-meridio-soap-1.png -->
+                <img src="assets/img/logo_nova.png" class="img-fluid" alt="SOAP integration Kurier Meridio">
+                <div class="portfolio-info">
+                  <h4>Juvo Uss Integration</h4>
+                  <p>Juvo (USS) is a digital platform/brand of USS Soluções Gerenciadas S.A., focused on self-service, service management, and system integration. It is used mainly in enterprise and public-sector environments to enable digital workflows, operational efficiency, and improved user experience.</p>
+                  <div class="project-tags">
+                    <span class="project-tag">Java</span>
+                    <span class="project-tag">SOAP</span>
+                    <span class="project-tag">Maven</span>
+                    <span class="project-tag">Legacy</span>
+                  </div>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/kurier-meridio-soap-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="SOAP Integration | Maven + Java | Kurier Meridio"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/jknery" target="_blank" title="Repository (update link)"><i class="bx bx-link"></i></a>
+                  <a href="#proj-kurier" class="portfolio-details-lightbox" data-glightbox="type: inline" title="Details"><i class="bx bx-info-circle"></i></a>
+                </div>
               </div>
             </div>
+
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+        <!-- Upgrade++: inline project details opened via GLightbox (info icon) -->
+        <div id="proj-pix" class="project-details">
+          <h3>PIX Reconciliation Engine</h3>
+          <p class="meta"><strong>Area:</strong> Banking | <strong>Role:</strong> Senior Fullstack / Tech Lead | <strong>Stack:</strong> Java, Spring Boot, Microservices</p>
+          <ul>
+            <li><strong>Problem:</strong> Reconcile internal vs external PIX operations with strong traceability.</li>
+            <li><strong>What I did:</strong> Designed orchestration flows, integration contracts and reliability patterns.</li>
+            <li><strong>Highlights:</strong> Logging/monitoring readiness and operational resilience.</li>
+            <li><strong>Screenshots:</strong> Place in assets/img/portfolio/pix-reconciliation-*.png</li>
+          </ul>
+        </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+        <div id="proj-pbh" class="project-details">
+          <h3>PBH Fazenda - Self-service Platform</h3>
+          <p class="meta"><strong>Area:</strong> Public Sector | <strong>Role:</strong> Backend/Fullstack | <strong>Stack:</strong> Java, Spring, Angular</p>
+          <ul>
+            <li><strong>Problem:</strong> Deliver secure self-service modules for municipal finance use cases.</li>
+            <li><strong>What I did:</strong> Implemented integrations, ensured maintainability and operational support readiness.</li>
+            <li><strong>Highlights:</strong> Security/compliance mindset and robust integration patterns.</li>
+            <li><strong>Screenshots:</strong> Place in assets/img/portfolio/pbh-fazenda-*.png</li>
+          </ul>
+        </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+        <div id="proj-mirroreye" class="project-details">
+          <h3>MirrorEye (Stoneridge)</h3>
+          <p class="meta"><strong>Area:</strong> Platforms/Embedded | <strong>Role:</strong> Fullstack/Platform Support | <strong>Focus:</strong> Data management and platform support</p>
+          <ul>
+            <li><strong>Problem:</strong> Support and evolve platform components for an embedded/automotive solution.</li>
+            <li><strong>What I did:</strong> Implemented/support workflows, improved operational stability and data flows.</li>
+            <li><strong>Highlights:</strong> Cross-functional troubleshooting and reliability improvements.</li>
+            <li><strong>Screenshots:</strong> Place in assets/img/portfolio/mirroreye-*.png</li>
+          </ul>
+        </div>
 
+        <div id="proj-tjpa" class="project-details">
+          <h3>TJPA Enterprise Systems</h3>
+          <p class="meta"><strong>Area:</strong> Justice/Public Sector | <strong>Role:</strong> Fullstack Developer | <strong>Stack:</strong> Java, Enterprise Integration</p>
+          <ul>
+            <li><strong>Problem:</strong> Maintain and evolve enterprise systems with governance and reliability requirements.</li>
+            <li><strong>What I did:</strong> Delivered features, fixes, and integration improvements in complex environments.</li>
+            <li><strong>Highlights:</strong> Quality mindset and sustainable maintenance.</li>
+            <li><strong>Screenshots:</strong> Place in assets/img/portfolio/tjpa-*.png</li>
+          </ul>
+        </div>
+
+        <div id="proj-genesys" class="project-details">
+          <h3>Genesys Cloud Flows (Carrefour / Shell)</h3>
+          <p class="meta"><strong>Area:</strong> Contact Center | <strong>Role:</strong> Architect/Developer | <strong>Stack:</strong> Genesys Cloud, IVR/Flows, Integrations</p>
+          <ul>
+            <li><strong>Problem:</strong> Build customer journeys with reliable routing, governance and measurable outcomes.</li>
+            <li><strong>What I did:</strong> Designed flows, integration points, and operational best practices.</li>
+            <li><strong>Highlights:</strong> Focus on self-service, transfer reasons, and operational KPIs.</li>
+            <li><strong>Screenshots:</strong> Place in assets/img/portfolio/genesys-flows-*.png</li>
+          </ul>
+        </div>
+
+        <div id="proj-kurier" class="project-details">
+          <h3>Kurier Meridio SOAP Integration</h3>
+          <p class="meta"><strong>Area:</strong> Enterprise Integration | <strong>Role:</strong> Backend Developer | <strong>Stack:</strong> Java, Maven, SOAP</p>
+          <ul>
+            <li><strong>Problem:</strong> Integrate with legacy SOAP endpoints (auth + timesheet operations).</li>
+            <li><strong>What I did:</strong> Implemented client integration and robust deserialization for referenced arrays (SOAP-ENC).</li>
+            <li><strong>Highlights:</strong> Integration resilience and maintainable adapter design.</li>
+            <li><strong>Screenshots:</strong> Place in assets/img/portfolio/kurier-meridio-soap-*.png</li>
+          </ul>
         </div>
 
       </div>
@@ -438,7 +746,7 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>1870 Ap.307 Feliciano Pedrosa Street, Belém, PB, Brazil</p>
+                <p>Belém, PB, Brazil</p>
               </div>
 
               <div class="email">
@@ -450,10 +758,10 @@
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+55 83 9941 11141</p>
+                <p>+55 83 99983 5802</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.66003582983143!2d-35.537112621846376!3d-6.70121591261098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1642732779172!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <!-- Map removed for privacy and cleaner aesthetics. -->
             </div>
 
           </div>
